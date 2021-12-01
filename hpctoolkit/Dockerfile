@@ -6,6 +6,7 @@ RUN apt-get update && \
 
 RUN git clone https://github.com/spack/spack && \
     . ./spack/share/spack/setup-env.sh && \
-    mkdir /hpctoolkit-env && \
-    spack env activate /hpctoolkit-env && \
+    mkdir -p /hpctoolki && \
+    spack env create -d /hpctoolkit && \
     spack install hpctoolkit
+    # spack external find && \

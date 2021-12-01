@@ -1,3 +1,4 @@
-FROM alpine
+FROM debian:11
 
-RUN apk add ffmpeg
+RUN apt-get -y update && \
+    apt-get -y install ffmpeg
